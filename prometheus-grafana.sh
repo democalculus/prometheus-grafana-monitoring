@@ -1,5 +1,10 @@
 #!/bin/bash
-
+#Add prometheus helm charts
+helm repo add prometheus https://prometheus-community.github.io/helm-charts
+sleep 60
+#Add grafana helm charts
+helm repo add grafana https://grafana.github.io/helm-charts
+sleep 60
 kubectl create ns monitor-ns
 #helm upgrade --install prometheus  prometheus/prometheus -n monitor-ns -f prometheus_values.yml
 ls -lart
